@@ -3,6 +3,57 @@ const DNATest = require('../models/dna-test');
 const Penyakit = require('../models/penyakit');
 const verdictDNA = require('../services/dna-test-verdict');
 
+const getAllDNATest = async (req, res) => {
+    try{
+        await DNATest.find()
+            .then(dna => {
+                res.status(200).send({
+                    message: 'Berhasil mengambil data',
+                    dna: dna
+                })
+            })
+            .catch(err => {
+                res.status(500).send({
+                    error: err.message
+                });
+            });
+    } catch (err) {
+        res.status(202).send({
+            error: err.message
+        });
+    }
+}
+
+const getAllTestByInput = async (req, res) => {
+    try{
+        const inputUser = req.query.q;
+        const listIdTest = await seacrhDNA(inputUser);
+
+        await DNATest.find(
+            {
+                _id: {
+                    $in: listIdTest
+                }
+            },
+            function(err, dna) {
+                if (err) {
+                    res.status(500).send({
+                        error: err.message
+                    });
+                }
+                res.status(200).send({
+                    message: 'Berhasil mengambil data',
+                    dna: dna
+                })
+            }
+        );
+    } catch (err) {
+        res.status(202).send({
+            error: err.message
+        });
+    }
+}
+
 const generateTestVerdict = async (req, res) => {
     try{
         let seqPenyakitDNA;
@@ -53,4 +104,8 @@ const generateTestVerdict = async (req, res) => {
     }
 }
 
-module.exports = generateTestVerdict;
+module.exports = {
+    getAllDNATest,
+    getAllTestByInput,
+    generateTestVerdict
+};

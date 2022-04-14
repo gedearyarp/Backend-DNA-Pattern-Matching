@@ -3,7 +3,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 
 const penyakitRoutes = require('./routes/penyakit.route');
-const predictRoutes = require('./routes/predict.route');
+const dnaRoutes = require('./routes/dna.route');
 const searchDNARoutes = require('./routes/search.route');
 
 dotenv.config();
@@ -25,10 +25,7 @@ mongoose.connect(uri, { useNewUrlParser: true });
 console.log('connected to MongoDB');
 
 app.use("/penyakit", penyakitRoutes);
-app.use("/dna", predictRoutes);
+app.use("/dna", dnaRoutes);
 app.use("/search", searchDNARoutes);
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-})
 
 app.listen(port);

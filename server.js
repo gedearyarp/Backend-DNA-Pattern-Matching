@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 
 const penyakitRoutes = require('./routes/penyakit');
 const predictRoutes = require('./routes/predict');
-const searchDNARoutes = require('./routes/searchDNA');
+const searchDNARoutes = require('./routes/search_dna');
 
 dotenv.config();
 const app = express()

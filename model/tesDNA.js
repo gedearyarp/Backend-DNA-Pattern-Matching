@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const tesDNA = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
@@ -9,4 +9,4 @@ const tesDNA = mongoose.Schema({
     status : Boolean,
 })
 
-export default mongoose.model('TesDNA', tesDNA)
+module.exports = mongoose.model('TesDNA', tesDNA);

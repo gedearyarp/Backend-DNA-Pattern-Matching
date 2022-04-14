@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const penyakit = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
@@ -6,4 +6,4 @@ const penyakit = mongoose.Schema({
     sequenceDNA : String,
 })
 
-export default mongoose.model('Penyakit', penyakit)
+module.exports = mongoose.model('Penyakit', penyakit);

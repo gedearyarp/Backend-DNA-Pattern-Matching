@@ -10,10 +10,8 @@ If you have the project hosted somewhere, include the link here. -->
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Screenshots](#screenshots)
-* [Setup](#setup)
 * [Usage](#usage)
 * [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
 <!-- * [License](#license) -->
@@ -26,6 +24,10 @@ Proyek ini dibentuk dengan tujuan memenuhi Tugas Besar 3 IF2211 Strategi Algorit
 | Ahmad Romy Zahran              | 13520009 |
 | I Gede Arya Raditya P          | 13520036 |
 | Rahmat Rafid Akbar             | 13520090 |
+
+### Useful Link
+- [Figma](https://www.figma.com/file/QVzQ3zq96w9cT7TxJoFCrI/DNA-Pattern-Matching?node-id=8%3A2)
+- [Spek Tubes](https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2021-2022/Tugas-Besar-3-IF2211-Strategi-Algoritma-2022.pdf)
 
 
 ## Technologies Used
@@ -46,36 +48,19 @@ Proyek ini dibentuk dengan tujuan memenuhi Tugas Besar 3 IF2211 Strategi Algorit
 
 
 ## Screenshots
-
-
-
-## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
-
+![image](https://user-images.githubusercontent.com/71829426/163831942-6f86d29f-2379-4d59-a842-f69e5f60a6b6.png)
 
 ## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
+### Backend
+`npm install`
+`npm server`
 
-`write-your-code-here`
-
+### Frontend
+`npm install`
+`npm run start`
 
 ## Project Status
 Project is: _in progress_ 
-
-
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
 
 
 ## Acknowledgements

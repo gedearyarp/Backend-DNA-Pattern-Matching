@@ -1,7 +1,6 @@
 const {kmp, lcs} = require('../lib/string-algo');
 
 async function verdictDNA(dnaPenyakit, dnaUser) {
-    // TODO: menghitung similarity dan status dari dna penyakit dan dna pengguna
     const idx = kmp(dnaPenyakit, dnaUser); // string matching dalam O(n+m)
     if(idx>=0) {
         const verdict = {

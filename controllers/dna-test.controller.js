@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const DNATest = require('../models/dna-test');
 const Penyakit = require('../models/penyakit');
-const verdictDNA = require('../services/dna-test-verdict');
+const verdictDNA = require('../services/dna-test-verdict.service');
 
 const getAllDNATest = async (req, res) => {
     try{

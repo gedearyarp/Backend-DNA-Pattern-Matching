@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const dotenv = require('dotenv');
+dotenv.config();
 
 const penyakitRoutes = require('./routes/penyakit.route');
 const dnaRoutes = require('./routes/dna.route');
 const searchDNARoutes = require('./routes/search.route');
 
-dotenv.config();
 const app = express()
 const port = 3000;
 

@@ -8,7 +8,7 @@ const dnaRoutes = require('./routes/dna.route');
 const searchDNARoutes = require('./routes/search.route');
 
 const app = express()
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json())
 app.use((req,res,next) =>{

@@ -1,4 +1,5 @@
-const {kmp, lcs} = require('../lib/string-algo');
+const kmp = require('../lib/kmp');
+const lcs = require('../lib/lcs');
 
 async function verdictDNA(dnaPenyakit, dnaUser) {
     const idx = kmp(dnaPenyakit, dnaUser); // string matching dalam O(n+m)

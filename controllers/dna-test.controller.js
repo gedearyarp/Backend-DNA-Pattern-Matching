@@ -7,29 +7,12 @@ const searchDNA = require('../services/search-dna.service');
 const getSearchHistorybyInput = async (req, res) => {
     try{
         const inputUser = req.query.q;
-        const listIdTest = await searchDNA(inputUser);
-        // console.log("input user:");
-        // console.log(inputUser);
-        await DNATest
-            .find(
-                {
-                    _id: {
-                        $in: listIdTest
-                    }
-                },
-            )
-            .exec()
-            .then(dnaTest => {
-                res.status(200).send({
-                    message: 'Berhasil mengambil data',
-                    dnaTest
-                })
-            })
-            .catch(err => {
-                res.status(500).send({
-                    error: err.message
-                });
-            });
+        const listHistory = await searchDNA(inputUser);
+
+        res.status(200).send({
+            message: 'Berhasil mengambil data',
+            data: listHistory
+        })
     } catch (err) {
         res.status(202).send({
             error: err.message
@@ -56,7 +39,7 @@ const generateTestVerdict = async (req, res) => {
             namaPengguna : req.body.namaPengguna,
             namaPenyakit : req.body.namaPenyakit,
             similarity : verdict.similarity,
-            status : verdict.status,
+            status : verdict.status
         });
 
         await objDNA
@@ -64,9 +47,7 @@ const generateTestVerdict = async (req, res) => {
             .then(() => {
                 res.status(201).send({
                     message: 'Berhasil menambahkan data',
-                    created: objDNA,
-                    similarity: verdict.similarity,
-                    status: verdict.status
+                    data: objDNA
                 })
             })
             .catch(err => {

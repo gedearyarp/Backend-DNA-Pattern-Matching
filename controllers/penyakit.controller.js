@@ -22,7 +22,7 @@ const addPenyakit = async (req, res) => {
                 .then(() => {
                     res.status(201).send({
                         message: 'Berhasil menambahkan data',
-                        created: objPenyakit
+                        data: objPenyakit
                     })
                 })
                 .catch(err => {
@@ -38,7 +38,7 @@ const addPenyakit = async (req, res) => {
             .then(() => {
                 res.status(201).send({
                     message: 'Berhasil menambahkan data',
-                    created: objPenyakit
+                    data: objPenyakit
                 })
             })
             .catch(err => {
@@ -61,7 +61,8 @@ const getAllPenyakit = async (req, res) => {
             .exec()
             .then(penyakit => {
                 res.status(200).send({
-                    penyakit
+                    message: 'Berhasil mengambil data',
+                    data: penyakit
                 })
             })
             .catch(err => {

@@ -12,7 +12,7 @@ async function verdictDNA(dnaPenyakit, dnaUser) {
         const lcs_len = lcs(dnaPenyakit, dnaUser); // longest common subsequence dalam O(n*m)
         const verdict = {
             similarity : 100*lcs_len/dnaPenyakit.length,
-            status : (this.similarity>=80)
+            status : (100*lcs_len/dnaPenyakit.length>=80)
         };
         return verdict;
     }

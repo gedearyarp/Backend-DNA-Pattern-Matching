@@ -1,8 +1,13 @@
 const express = require('express');
-const validateSequence = require('../middleware/dna_validation');
-const addPenyakit = require('../controllers/penyakit.controller');
+const validateSequence = require('../middleware/dna-validation');
+const {addPenyakit, getAllPenyakit} = require('../controllers/penyakit.controller');
 
 const router = express.Router();
+
+router.get(
+    "/",
+    getAllPenyakit
+)
 
 router.post(
     "/add" ,

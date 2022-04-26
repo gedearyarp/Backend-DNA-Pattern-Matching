@@ -1,16 +1,11 @@
 const express = require('express');
-const {getAllDNATest, getAllTestByInput} = require('../controllers/dna-test.controller');
+const {getSearchHistorybyInput} = require('../controllers/dna-test.controller');
 
 const router = express.Router();
 
-router.get(
-    "/",
-    getAllDNATest
-)
-
 router.post(
     "/",
-    getAllTestByInput
+    getSearchHistorybyInput
 )
 
 module.exports = router;

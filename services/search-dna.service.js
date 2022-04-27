@@ -24,6 +24,11 @@ async function searchDNA(inputUser) {
 
     if(query === null)
         return null;
+
+    let regexpNamaPenyakit;
+    if(query.groups.namaPenyakit===undefined) {
+        regexpNamaPenyakit = new RegExp(".*" + query.groups.namaPenyakit + ".*", 'i');
+    }
     
     return listTesDNA
         .filter(dna => 
@@ -32,7 +37,7 @@ async function searchDNA(inputUser) {
                 checkFormat1(query.groups.tanggal, dna.tanggal)
             ) && (
                 query.groups.namaPenyakit === undefined || 
-                query.groups.namaPenyakit.toLowerCase() === dna.namaPenyakit.toLowerCase()
+                regexpNamaPenyakit.test(dna.namaPenyakit)
             )
         );
 }

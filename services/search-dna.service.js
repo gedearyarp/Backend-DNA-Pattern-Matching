@@ -26,17 +26,17 @@ async function searchDNA(inputUser) {
         return null;
 
     let regexpNamaPenyakit;
-    if(!query.groups.namaPenyakit===undefined) {
+    if(query.groups.namaPenyakit) {
         regexpNamaPenyakit = new RegExp(".*" + query.groups.namaPenyakit + ".*", 'i');
     }
-    
+
     return listTesDNA
         .filter(dna => 
             (
-                query.groups.tanggal === undefined || 
+                !query.groups.tanggal || 
                 checkFormat1(query.groups.tanggal, dna.tanggal)
             ) && (
-                query.groups.namaPenyakit === undefined || 
+                !query.groups.namaPenyakit || 
                 regexpNamaPenyakit.test(dna.namaPenyakit)
             )
         );

@@ -26,7 +26,7 @@ async function searchDNA(inputUser) {
         return null;
 
     let regexpNamaPenyakit;
-    if(query.groups.namaPenyakit===undefined) {
+    if(!query.groups.namaPenyakit===undefined) {
         regexpNamaPenyakit = new RegExp(".*" + query.groups.namaPenyakit + ".*", 'i');
     }
     

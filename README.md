@@ -53,7 +53,7 @@ Proyek ini dibentuk dengan tujuan memenuhi Tugas Besar 3 IF2211 Strategi Algorit
 ## Usage
 ### Backend
 `npm install`
-`node server.js`
+`node index.js`
 
 ### Frontend
 `npm install`

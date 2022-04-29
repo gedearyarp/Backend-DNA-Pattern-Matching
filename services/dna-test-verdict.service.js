@@ -2,7 +2,7 @@ const kmp = require('../lib/kmp');
 const lcs = require('../lib/lcs');
 
 async function verdictDNA(dnaPenyakit, dnaUser) {
-    const idx = kmp(dnaPenyakit, dnaUser); // string matching dalam O(n+m)
+    const idx = kmp(dnaPenyakit, dnaUser);
     if(idx>=0) {
         const verdict = {
             similarity : 100,
@@ -10,7 +10,7 @@ async function verdictDNA(dnaPenyakit, dnaUser) {
         };
         return verdict;
     } else {
-        const lcs_len = lcs(dnaPenyakit, dnaUser); // longest common subsequence dalam O(n*m)
+        const lcs_len = lcs(dnaPenyakit, dnaUser);
         const similarity = 100*lcs_len/dnaPenyakit.length;
 
         const verdict = {

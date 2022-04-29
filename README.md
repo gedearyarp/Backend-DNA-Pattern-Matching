@@ -26,6 +26,7 @@ Proyek ini dibentuk dengan tujuan memenuhi Tugas Besar 3 IF2211 Strategi Algorit
 | Rahmat Rafid Akbar             | 13520090 |
 
 ### Useful Link
+- [WebApp](https://dnamatch.vercel.app/)
 - [Figma](https://www.figma.com/file/QVzQ3zq96w9cT7TxJoFCrI/DNA-Pattern-Matching?node-id=8%3A2)
 - [Spek Tubes](https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2021-2022/Tugas-Besar-3-IF2211-Strategi-Algoritma-2022.pdf)
 
@@ -49,6 +50,10 @@ Proyek ini dibentuk dengan tujuan memenuhi Tugas Besar 3 IF2211 Strategi Algorit
 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/71829426/163831942-6f86d29f-2379-4d59-a842-f69e5f60a6b6.png)
+![image](https://user-images.githubusercontent.com/71829426/165985383-ec22f5cc-2ffc-4f76-a873-237f5a46fe18.png)
+![image](https://user-images.githubusercontent.com/71829426/165985434-ef566735-c3bb-450a-9c46-649d965d1982.png)
+![image](https://user-images.githubusercontent.com/71829426/165985495-fcc11590-141d-4149-a676-2e67e962e5d8.png)
+
 
 ## Usage
 ### Backend
@@ -60,7 +65,7 @@ Proyek ini dibentuk dengan tujuan memenuhi Tugas Besar 3 IF2211 Strategi Algorit
 `npm run start`
 
 ## Project Status
-Project is: _in progress_ 
+Project is: _done_ 
 
 
 ## Acknowledgements
